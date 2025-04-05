@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Contact Me</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Contact Me</h1>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <span id="theme-icon" class="icon-moon"></span>
+            </button>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section contact">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or would like to get in touch, please fill out the form below or reach me at:</p>
+            <p><strong>Email:</strong> your.email@example.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <form action="https://formspree.io/f/manepvyb" method="POST" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                
+                <!-- Specify the subject of the email -->
+                <input type="hidden" name="_subject" value="New Contact Form Submission">
+                
+                <!-- Redirect to your custom thank-you.html -->
+                <input type="hidden" name="_next" value="http://localhost:8000/src/thankyou.html">
+                
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Brendan Helms. All rights reserved.</p>
+            <p>Follow me on <a href="https://github.com/yourusername" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></p>
+        </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
