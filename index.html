@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cybersecurity Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="src/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -32,11 +32,11 @@
         <section class="section about">
             <h2>Hello There...</h2>
             <div class="about-content">
-                <img src="../assets/images/ghibli.png" alt="Brendan Helms" style="width: 120px; height: 120px; border-radius: 65%;">
+                <img src="assets/images/ghibli.png" alt="Brendan Helms" style="width: 120px; height: 120px; border-radius: 65%;">
                 <p>I’m Brendan Helms, a passionate cyber enthusiast dedicated to unraveling the intricacies of digital security. 
                     My interests lie in crafting tools like SSH honeypots, building NIST-compliant password checkers, and analyzing logs 
                     with Splunk to uncover threats. I thrive on exploring network vulnerabilities using Kali Linux and mastering Python for 
-                    security projects. I recently recieved a degree in Cybersecurity at the University of Central Missouri, where I’ve honed 
+                    security projects. I recently received a degree in Cybersecurity at the University of Central Missouri, where I’ve honed 
                     my skills in log ingestion, query-based analysis, and secure coding. When not coding, I’m diving into cyber 
                     trends, always eager to fortify the digital world.
                 </p>
@@ -50,13 +50,13 @@
             <div class="certifications-gallery">
                 <div class="certification">
                     <a href="https://www.credly.com/badges/ff31c6aa-1320-4054-9506-7d8d6015e212" target="_blank">
-                        <img src="../assets/images/security+.png" alt="CompTIA Security+ Certification">
+                        <img src="assets/images/security+.png" alt="CompTIA Security+ Certification">
                     </a>
                     <p>CompTIA Security+</p>
                 </div>
                 <div class="certification">
                     <a href="https://www.credly.com/badges/864e1457-beef-4e39-9559-840a6e4a9769" target="_blank">
-                        <img src="../assets/images/google.png" alt="Google Cybersecurity Professional Certification">
+                        <img src="assets/images/google.png" alt="Google Cybersecurity Professional Certification">
                     </a>
                     <p>Google Cybersecurity Professional</p>
                 </div>
@@ -70,19 +70,19 @@
             <div class="project-gallery">
                 <div class="project">
                     <h3>NIST 800 63-B Password Checker Script</h3>
-                    <img src="../assets/images/python_logo.png" alt="Project 1">
+                    <img src="assets/images/python_logo.png" alt="Project 1">
                     <p>I created a Python password strength checker based on NIST Special Publication 800-63B: Digital Identity Guidelines. It evaluates passwords against modern security standards, emphasizing length, usability, and protection against common or compromised passwords over arbitrary complexity rules.</p>
                     <a href="https://github.com/BHelmss/password_checker" target="_blank" class="btn">GitHub</a>
                 </div>
                 <div class="project">
                     <h3>Local Socket Honeypot</h3>
-                    <img src="../assets/images/honeypot.png" alt="Project 2">
+                    <img src="assets/images/honeypot.png" alt="Project 2">
                     <p>I developed a Python-based SSH honeypot that mimics a server on port 22, using the socket module to listen for connections and log attempts to honeypot.log. This project sharpened my skills in network programming, socket handling, and log management.</p>
                     <a href="https://github.com/BHelmss/Honeypot_Script" target="_blank" class="btn">GitHub</a>
                 </div>
                 <div class="project">
                     <h3>Splunk Security Scenario</h3>
-                    <img src="../assets/images/splunk.png" alt="Project 3">
+                    <img src="assets/images/splunk.png" alt="Project 3">
                     <p>Using Splunk's Search and Reporting tool, I investigated failed SSH login attempts for the root account on the mail server. This exercise honed my skills in log ingestion, query-based searching, and basic security analysis using Splunk.</p>
                     <a href="https://github.com/BHelmss/Splunk-Cloud-Lab" target="_blank" class="btn">GitHub</a>
                 </div>
@@ -121,7 +121,6 @@
                 <ul class="related-projects">
                     <li><a href="https://github.com/BHelmss/SSH_Login_Exploit" target="_blank">SSH Metasploit Exploit</a></li>
                     <li><a href="https://github.com/BHelmss/tryhackme_CTF_Writeups" target="_blank">TryHackMe Writeups</a></li>
-
                 </ul>
             </div>
             <div class="skill">
@@ -141,7 +140,6 @@
                 <ul class="related-projects">
                     <li><a href="https://github.com/BHelmss/SpotBugs_Static_Analysis" target="_blank">Static Analysis</a></li>
                     <li><a href="https://github.com/BHelmss/Gerrit_Code_Review" target="_blank">Gerrit Code Review</a></li>
-
                 </ul>
             </div>
         </section>
@@ -150,7 +148,7 @@
         <section class="section resume">
             <h2>Download My Resume</h2>
             <p>If you'd like to learn more about my experience and skills, feel free to download my resume:</p>
-            <a href="../assets/docs/BrendanHelmsresume.pdf" class="btn" download>Download My Resume</a>
+            <a href="assets/docs/BrendanHelmsresume.pdf" class="btn" download>Download My Resume</a>
         </section>
     </main>
 
@@ -161,6 +159,6 @@
             <p>Follow me on <a href="https://github.com/BHelmss" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/brendan-helms/" target="_blank">LinkedIn</a> | <a href="https://x.com/BrendanHelmss" target="_blank">X</a></p>
         </div>
     </footer>
-    <script src="js/scripts.js"></script>
+    <script src="src/js/scripts.js"></script>
 </body>
 </html>
