@@ -117,6 +117,162 @@ body.light-mode .contact-form textarea:focus {
     margin-top: 0;
 }
 
+/* Header Styling */
+.header {
+    background: #161b22;
+    color: #c9d1d9;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    border-bottom: 1px solid #30363d;
+    text-align: center; /* Center-align text */
+    position: relative; /* Allow absolute positioning for the button */
+}
+
+.header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #00ccaa;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: 2rem; /* Adjust distance from the right edge */
+    transform: translateY(-50%); /* Center vertically relative to the header */
+    background: none;
+    border: 2px solid #00ccaa;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+    background: rgba(0, 255, 204, 0.1);
+}
+
+.theme-toggle-btn span {
+    font-size: 1.2rem;
+    color: #00ccaa;
+}
+
+body.light-mode .theme-toggle-btn {
+    border-color: #00ccaa;
+}
+
+body.light-mode .theme-toggle-btn span {
+    color: #00ccaa;
+}
+
+/* Navigation Styling */
+.header .nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center; /* Center navigation links */
+    margin-top: 1rem;
+}
+
+.header .nav a {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.header .nav a:hover {
+    color: #00ffcc;
+    transform: scale(1.1);
+}
+
+.header .nav a.active {
+    color: #00ffcc;
+    text-decoration: underline;
+}
+
+/* Project Gallery Section */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-card img {
+    width: 150px; /* Ensure all images are the same size */
+    height: 150px;
+    object-fit: cover; /* Crop images to fit */
+    margin: 0 auto 1rem auto; /* Center the image */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-card img:hover {
+    transform: scale(1.1);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #00ccaa;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #c9d1d9;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1; /* Push the button to the bottom */
+}
+
+.project-card .btn {
+    padding: 0.75rem 1.5rem;
+    background: #00ffcc;
+    color: #0d1117;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    align-self: center; /* Center the button horizontally */
+}
+
+.project-card .btn:hover {
+    background: #00e6b3;
+    transform: scale(1.05);
+}
+
 /* About Section */
 .about-content {
     display: flex;
@@ -197,41 +353,6 @@ body.light-mode .about-content p {
     color: #c9d1d9;
 }
 
-body.light-mode .certifications {
-    background: #f9f9f9; /* Light gray background for certifications */
-    border: 1px solid #cccccc; /* Light gray border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-body.light-mode .certifications h2 {
-    color: #00ccaa; /* Teal color for the heading */
-}
-
-body.light-mode .certifications p {
-    color: #333333; /* Dark gray text for the description */
-}
-
-body.light-mode .certification {
-    background: #ffffff; /* White background for certification cards */
-    border: 1px solid #dddddd; /* Light gray border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.light-mode .certification:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
-}
-
-body.light-mode .certification img {
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
-}
-
-body.light-mode .certification p {
-    color: #333333; /* Dark gray text for certification descriptions */
-}
-
 /* Section Styling */
 .section {
     margin-bottom: 2rem;
@@ -257,34 +378,6 @@ body.light-mode .certification p {
     margin-bottom: 1rem;
 }
 
-
-/* Navigation Links */
-.nav {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.nav a {
-    color: #c9d1d9;
-    text-decoration: none;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.nav a:hover {
-    color: #00ffcc;
-    transform: scale(1.1);
-}
-
-.nav a.active {
-    color: #00ffcc;
-    text-decoration: underline;
-}
-
 /* Footer */
 .footer {
     text-align: center;
@@ -304,58 +397,102 @@ body.light-mode .certification p {
     color: #c9d1d9;
 }
 
-/* Contact Form Styling */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1rem;
+/* Skills Section */
+.skills-section {
+    margin-top: 1.5rem; /* Reduced top margin */
+    padding: 1rem; /* Added padding to shrink the section */
 }
 
-.contact-form label {
+.skills-section h2 {
+    font-size: 1.8rem; /* Slightly smaller font size for the section title */
+    margin-bottom: 1rem; /* Reduced bottom margin */
+    text-align: center;
+}
+
+.skill {
+    margin-bottom: 1.5rem; /* Reduced spacing between skills */
+}
+
+.skill-name {
+    font-size: 1rem; /* Reduced font size for skill titles */
+    color: #00ffcc;
+    margin-bottom: 0.3rem; /* Reduced bottom margin */
+    display: block;
+}
+
+.progress-bar {
+    background: #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 15px; /* Reduced height of the progress bar */
+    position: relative;
+    margin-bottom: 0.8rem; /* Reduced bottom margin */
+}
+
+.progress {
+    background: #00ffcc;
+    height: 100%;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-bar .progress[style*="width: 80%"] {
+    width: 80%;
+}
+
+.progress-bar .progress[style*="width: 65%"] {
+    width: 65%;
+}
+
+.progress-bar .progress[style*="width: 60%"] {
+    width: 60%;
+}
+
+.related-projects {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.related-projects li {
+    margin-bottom: 0.3rem; /* Reduced spacing between project links */
+}
+
+.related-projects a {
+    color: #019779;
+    text-decoration: none;
     font-weight: bold;
-    color: #c9d1d9;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 0.75rem;
-    border: 1px solid #30363d;
-    border-radius: 4px;
-    background: #161b22;
-    color: #c9d1d9;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+.related-projects a:hover {
+    color: #00e6b3;
+    transform: scale(1.05);
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #00ffcc;
-    box-shadow: 0 0 8px #00ffcc;
-    background: #0d1117;
+/* Resume Section */
+.resume {
+    text-align: center; /* Center-align all content in the resume section */
 }
 
-.contact-form textarea {
-    resize: none;
-}
-
-.contact-form .btn {
-    padding: 0.75rem 1.5rem;
+.resume .btn {
+    display: inline-block;
+    padding: 1.2rem 2.5rem; /* Slightly larger padding for a bigger button */
     background: #00ffcc;
     color: #0d1117;
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Slightly larger font size */
     font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 1rem auto; /* Add vertical spacing and center the button */
 }
 
-.contact-form .btn:hover {
+.resume .btn:hover {
     background: #00e6b3;
     transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
