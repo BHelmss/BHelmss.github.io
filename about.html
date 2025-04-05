@@ -6,6 +6,79 @@
     <title>About Me - Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="/src/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Inline styles for sci-fi-inspired image borders */
+        .sci-fi-image {
+            border: 4px solid transparent;
+            border-image: linear-gradient(45deg, #00ffcc, #00ccaa, #0033cc, #6600cc);
+            border-image-slice: 1;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.6), 0 0 30px rgba(0, 204, 170, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sci-fi-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 204, 170, 0.6);
+        }
+
+        /* Inline styles for bullet points */
+        ul.custom-bullets {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul.custom-bullets li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            color: #c9d1d9;
+        }
+
+        ul.custom-bullets li::before {
+            content: "➤";
+            position: absolute;
+            left: 0;
+            color: #00ffcc;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        /* Three-column layout for Pathway, Clubs, and Graduation Image */
+        .three-column-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .three-column-section .column {
+            flex: 1;
+        }
+
+        .three-column-section .column img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .three-column-section h3 {
+            font-size: 1.5rem;
+            color: #00ccaa;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .three-column-section ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+        }
+
+        .three-column-section ul li {
+            margin-bottom: 0.5rem;
+            color: #c9d1d9;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -24,35 +97,81 @@
         </div>
     </header>
     <main class="main">
+        <!-- Background Section -->
         <section class="section background">
             <h2>Background</h2>
-            <p>
-                Welcome to my portfolio! I am a cybersecurity enthusiast with a passion for protecting systems and networks from threats. 
-                My journey in cybersecurity began with a fascination for technology and a desire to understand how things work.
-            </p>
+            <div class="content-with-image">
+                <img src="assets/images/Colorado.JPG" alt="Brendan Helms" class="sci-fi-image" style="float: left; width: 250px; height: 300px; margin-right: 1.5rem;">
+                <p>
+                    I’m Brendan Helms, a cybersecurity enthusiast with a burning passion for decoding the complexities of digital security—and a drive to make my mark in the industry. My journey kicked off with a curiosity about how systems tick, which led me to earn my B.S. in Cybersecurity from the University of Central Missouri. Along the way, I’ve stacked up certifications and rolled up my sleeves on projects that fuel my excitement—like crafting SSH honeypots to trap intruders, building NIST-compliant password checkers to enforce ironclad standards, and digging into Splunk to analyze logs and sniff out threats.
+                </p>
+                <p>
+                    I’m at home exploring network vulnerabilities with Kali Linux, scripting in Python to automate security tasks, and sharpening my skills in log ingestion and query-based analysis. My time at UCM honed my knack for secure coding and taught me to approach every challenge with a hacker’s mindset—always probing, always learning. Beyond the screen, I’m plugged into the latest cyber trends, eager to innovate and strengthen the digital world one solution at a time.
+                </p>
+            </div>
+            <div style="clear: both;"></div>
         </section>
-        <section class="section skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Network Security</li>
-                <li>Penetration Testing</li>
-                <li>Incident Response</li>
-                <li>Security Auditing</li>
-                <li>Malware Analysis</li>
-            </ul>
-        </section>
+
+        <!-- Interests Section -->
         <section class="section interests">
             <h2>Interests</h2>
-            <p>
-                In addition to my professional skills, I am interested in ethical hacking, threat intelligence, and the latest advancements in cybersecurity technologies. 
-                I enjoy participating in Capture The Flag (CTF) competitions and contributing to open-source security projects.
-            </p>
+            <div class="content-with-image">
+                <img src="assets/images/fishing.jpg" alt="Fishing" class="sci-fi-image" style="float: right; width: 200px; height: auto; margin-left: 1.5rem;">
+                <p>
+                    Outside of my professional pursuits, I have a variety of interests that keep me engaged and inspired. Here are some of the activities I enjoy:
+                </p>
+                <ul class="custom-bullets">
+                    <li>Fishing – Relaxing and connecting with nature.</li>
+                    <li>Playing the guitar – Expressing creativity through music.</li>
+                    <li>Chess – Sharpening problem-solving skills and strategic thinking.</li>
+                    <li>Capture The Flag (CTF) competitions – Testing ethical hacking skills and collaborating with like-minded individuals.</li>
+                </ul>
+            </div>
+            <div style="clear: both;"></div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section education">
+            <h2>Education</h2>
+            <div class="content-with-image">
+                <img src="assets/images/Mule.png" alt="University of Central Missouri Logo" class="sci-fi-image" style="float: left; width: 200px; height: auto; margin-right: 1.5rem;">
+                <p>
+                    I’m a proud graduate of the <strong>University of Central Missouri</strong>, where I earned my Bachelor of Science in <strong>Cybersecurity</strong>. Throughout my studies, I dove deep into the world of secure coding practices, network security, and incident response—building a solid foundation to tackle the ever-evolving challenges of the digital landscape. Passionate about protecting systems and solving complex problems, I blend technical expertise with a proactive mindset to keep data safe and networks resilient.
+                </p>
+            </div>
+            <div style="clear: both;"></div>
+
+            <div class="three-column-section">
+                <!-- Column 1: Pathway -->
+                <div class="column pathway">
+                    <h3>Secure Software Pathway</h3>
+                    <ul class="custom-bullets">
+                        <li>Network Security and Penetration Testing</li>
+                        <li>Digital Forensics</li>
+                        <li>Secure Software Development</li>
+                        <li>Incident Response and Threat Management</li>
+                    </ul>
+                </div>
+                <!-- Column 2: Clubs -->
+                <div class="column clubs">
+                    <h3>Clubs and Organizations</h3>
+                    <ul class="custom-bullets">
+                        <li>CyberMules - Cybersecurity Club</li>
+                        <li>Upsilon Pi Epsilon - Honor's Society</li>
+                        <li>ACM - Computing Club</li>
+                    </ul>
+                </div>
+                <!-- Column 3: Graduation Image -->
+                <div class="column">
+                    <img src="assets/images/graduation.jpg" alt="Graduation Picture" class="sci-fi-image" style="width: 350px; height: auto; margin-top: 2rem;">
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Brendan Helms. All rights reserved.</p>
-            <p>Follow me on <a href="https://github.com/yourusername" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></p>
+            <p>Follow me on <a href="https://github.com/BHelmss" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/brendan-helms/" target="_blank">LinkedIn</a> | <a href="https://x.com/BrendanHelmss" target="_blank">X</a></p>
         </div>
     </footer>
     <script src="/src/js/scripts.js"></script>
