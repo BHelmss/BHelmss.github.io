@@ -6,6 +6,7 @@
     <title>Portfolio - Cybersecurity Projects</title>
     <link rel="stylesheet" href="/src/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -25,40 +26,100 @@
     </header>
     <main class="main">
         <section class="section portfolio">
-            <h2>Featured Projects</h2>
+            <h2>Projects</h2>
             <p>Here are some of the projects I've worked on in the field of cybersecurity:</p>
-            <ul>
-                <li>
-                    <strong>Project 1:</strong> <em>Penetration Testing Toolkit</em> - A custom toolkit for performing penetration tests on web applications and networks.
-                </li>
-                <li>
-                    <strong>Project 2:</strong> <em>Incident Response Playbook</em> - A comprehensive guide for handling cybersecurity incidents effectively.
-                </li>
-                <li>
-                    <strong>Project 3:</strong> <em>Malware Analysis Sandbox</em> - A virtual environment for analyzing and reverse-engineering malware samples.
-                </li>
-                <li>
-                    <strong>Project 4:</strong> <em>Threat Intelligence Dashboard</em> - A dashboard that aggregates and visualizes threat intelligence data in real-time.
-                </li>
-            </ul>
+            <div class="project-gallery">
+                <div class="project-card">
+                    <h3>Gerrit Code Review</h3>
+                    <img src="assets/images/gerrit.png" alt="Gerrit Logo">
+                    <p>This project demonstrates the implementation of a Gerrit review workflow for secure software engineering. </p>
+                    <a href="https://github.com/BHelmss/Gerrit_Code_Review" class="btn">View GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Chronicle SIEM</h3>
+                    <img src="assets/images/chronicle.png" alt="Chronicle Logo">
+                    <p>I will use the Chronicle SIEM to invesitgate a security incident involving a phishing scenario.</p>
+                    <a href="https://github.com/BHelmss/Chronicle-Lab" class="btn">View GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Spotbugs Static Analysis</h3>
+                    <img src="assets/images/spotbugs.png" alt="Spotbugs Logo">
+                    <p>This project focuses on analyzing the OWASP WebGoat application to identify and remediate security vulnerabilities using SpotBugs.</p>
+                    <a href="https://github.com/BHelmss/SpotBugs_Static_Analysis" class="btn">View GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Metasploit SSH Exploit</h3>
+                    <img src="assets/images/Metasploit.png" alt="Metasploit Logo">
+                    <p>I will be utilizing metasploit to compromise the login credentials of an account on a Linux Mint VM.</p>
+                    <a href="https://github.com/BHelmss/SSH_Login_Exploit" class="btn">View GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Splunk Lab</h3>
+                    <img src="assets/images/splunk.png" alt="Splunk Logo">
+                    <p> I will create an account, ingest a new data set, analyze the data utilizing queries and search filters, and undergoing a short security practice scenario.</p>
+                    <a href="https://github.com/BHelmss/Splunk-Cloud-Lab" class="btn">View GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>TryHackMe Cheese CTF</h3>
+                    <img src="assets/images/cheese.jpg" alt="Cheese Logo">
+                    <p> I am going to demonstrate how to complete tryhackme's Cheese CTF. I will enumerate, exploit, and gain access to root files.</p>
+                    <a href="https://github.com/BHelmss/Cheese_CTF" class="btn">View GitHub</a>
+                </div>
+            </div>
         </section>
         <section class="section tools">
             <h2>Tools & Technologies</h2>
             <p>Here are some of the tools and technologies I frequently use in my projects:</p>
-            <ul>
-                <li>Wireshark</li>
-                <li>Metasploit</li>
-                <li>Burp Suite</li>
-                <li>Splunk</li>
-                <li>Python (for scripting and automation)</li>
-                <li>Docker (for creating isolated environments)</li>
-            </ul>
+            <div class="skills-section">
+                <div class="skill">
+                    <span class="skill-name">Wireshark</span>
+                    <p class="skill-description">Network protocol analyzer for troubleshooting and analysis.</p>
+                    <div class="progress-bar" style="--progress-color: #0078d7;">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">Metasploit</span>
+                    <p class="skill-description">Penetration testing framework for exploiting vulnerabilities.</p>
+                    <div class="progress-bar" style="--progress-color: #ff4500;">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">Burp Suite</span>
+                    <p class="skill-description">Web vulnerability scanner for penetration testing.</p>
+                    <div class="progress-bar" style="--progress-color: #f58220;">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">Splunk</span>
+                    <p class="skill-description">Log analysis and monitoring tool for cybersecurity insights.</p>
+                    <div class="progress-bar" style="--progress-color: #00aa41;">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">Python</span>
+                    <p class="skill-description">Used for scripting, automation, and cybersecurity tools.</p>
+                    <div class="progress-bar" style="--progress-color: #3776ab;">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">Docker</span>
+                    <p class="skill-description">Containerization platform for isolated environments.</p>
+                    <div class="progress-bar" style="--progress-color: #2496ed;">
+                        <div class="progress" style="width: 60%;"></div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Brendan Helms. All rights reserved.</p>
-            <p>Follow me on <a href="https://github.com/yourusername" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></p>
+            <p>Follow me on <a href="https://github.com/BHelmss" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/brendan-helms/" target="_blank">LinkedIn</a> | <a href="https://x.com/BrendanHelmss" target="_blank">X</a></p>
         </div>
     </footer>
     <script src="/src/js/scripts.js"></script>

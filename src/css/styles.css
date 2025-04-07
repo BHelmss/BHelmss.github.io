@@ -273,6 +273,31 @@ body.light-mode .theme-toggle-btn span {
     transform: scale(1.05);
 }
 
+/* Light Mode - Project Cards */
+body.light-mode .project-card {
+    background: #ffffff; /* Light background for project cards */
+    border: 1px solid #cccccc; /* Light border color */
+    color: #000000; /* Dark text color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for light mode */
+}
+
+body.light-mode .project-card h3 {
+    color: #00ccaa; /* Match the "Featured Projects" title color */
+}
+
+body.light-mode .project-card p {
+    color: #000000; /* Dark text color for project descriptions */
+}
+
+body.light-mode .project-card .btn {
+    background: #00ccaa; /* Match the "Featured Projects" title color */
+    color: #ffffff; /* White button text */
+}
+
+body.light-mode .project-card .btn:hover {
+    background: #009e88; /* Slightly darker shade for hover effect */
+}
+
 /* About Section */
 .about-content {
     display: flex;
@@ -353,6 +378,32 @@ body.light-mode .about-content p {
     color: #c9d1d9;
 }
 
+/* Light Mode - Certifications Section */
+body.light-mode .certifications {
+    background: #ffffff; /* Light background for the section */
+    border: 1px solid #cccccc; /* Light border color */
+    color: #000000; /* Dark text color */
+}
+
+body.light-mode .certification {
+    background: #f9f9f9; /* Light background for individual certifications */
+    border: 1px solid #e0e0e0; /* Light border color */
+    color: #000000; /* Dark text color */
+}
+
+body.light-mode .certification img {
+    border-radius: 8px; /* Keep the rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for light mode */
+}
+
+body.light-mode .certification p {
+    color: #000000; /* Dark text color for certification descriptions */
+}
+
+body.light-mode .certifications p {
+    color: #000000; /* Set text color to black in light mode */
+}
+
 /* Section Styling */
 .section {
     margin-bottom: 2rem;
@@ -397,6 +448,14 @@ body.light-mode .about-content p {
     color: #c9d1d9;
 }
 
+body.light-mode .footer a {
+    color: #555555; /* Darkened color for social links in light mode */
+}
+
+body.light-mode .footer a:hover {
+    color: #333333; /* Even darker color on hover */
+}
+
 /* Skills Section */
 .skills-section {
     margin-top: 1.5rem; /* Reduced top margin */
@@ -420,32 +479,37 @@ body.light-mode .about-content p {
     display: block;
 }
 
+body.light-mode .skill-name {
+    color: #00806a; /* Match the title color */
+}
+
+/* Progress Bar */
 .progress-bar {
     background: #30363d;
     border-radius: 8px;
     overflow: hidden;
-    height: 15px; /* Reduced height of the progress bar */
+    height: 15px;
     position: relative;
-    margin-bottom: 0.8rem; /* Reduced bottom margin */
+    margin-bottom: 1rem;
 }
 
 .progress {
-    background: #00ffcc;
+    background: var(--progress-color, #00ffcc); /* Fallback color */
     height: 100%;
-    width: 0;
+    width: 0; /* Default width */
     transition: width 0.5s ease-in-out;
 }
 
-.progress-bar .progress[style*="width: 80%"] {
+.progress-bar[data-skill="90"] .progress {
+    width: 90%;
+}
+
+.progress-bar[data-skill="80"] .progress {
     width: 80%;
 }
 
-.progress-bar .progress[style*="width: 65%"] {
-    width: 65%;
-}
-
-.progress-bar .progress[style*="width: 60%"] {
-    width: 60%;
+.progress-bar[data-skill="70"] .progress {
+    width: 70%;
 }
 
 .related-projects {
@@ -495,4 +559,143 @@ body.light-mode .about-content p {
     background: #00e6b3;
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Contact Section */
+/* Contact Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #161b22;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    color: #c9d1d9;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #c9d1d9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00ccaa;
+    box-shadow: 0 0 8px #00ccaa;
+    outline: none;
+    background: #161b22;
+}
+
+.contact-form button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background: #00ffcc;
+    color: #0d1117;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.contact-form button:hover {
+    background: #00e6b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Light Mode - Contact Form */
+body.light-mode .contact-form {
+    background: #ffffff; /* Light background for the form */
+    border: 1px solid #cccccc; /* Light border color */
+    color: #000000; /* Dark text color */
+}
+
+body.light-mode .contact-form label {
+    color: #000000; /* Dark text for labels */
+}
+
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+    background: #f9f9f9; /* Light background for input fields */
+    border: 1px solid #cccccc; /* Light border color */
+    color: #000000; /* Dark text color */
+}
+
+body.light-mode .contact-form input:focus,
+body.light-mode .contact-form textarea:focus {
+    border-color: #00ccaa; /* Match the title color */
+    box-shadow: 0 0 8px #00ccaa; /* Subtle glow effect */
+    background: #ffffff; /* Keep the background white */
+}
+
+/* Adjust Entry Field Height */
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem 0.75rem; /* Reduce padding for shorter fields */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+/* Responsive Design for About Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack the image and text vertically */
+        text-align: center; /* Center-align the text */
+    }
+
+    .about-content img {
+        max-width: 100%; /* Ensure the image fits within the container */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 1rem; /* Add spacing below the image */
+    }
+
+    .about-content p {
+        text-align: justify; /* Keep text justified for readability */
+    }
+}
+/* Responsive Design for Three-Column Section */
+@media (max-width: 768px) {
+    .three-column-section {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center-align the content */
+        gap: 2rem; /* Add spacing between stacked columns */
+    }
+
+    .three-column-section .column {
+        width: 100%; /* Make each column take full width */
+        text-align: center; /* Center-align text and images */
+    }
+
+    .three-column-section .column img {
+        max-width: 100%; /* Ensure images fit within the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .three-column-section ul {
+        padding-left: 0; /* Remove left padding for bullet points */
+    }
+
+    .three-column-section ul li {
+        text-align: left; /* Keep bullet points left-aligned */
+    }
 }
